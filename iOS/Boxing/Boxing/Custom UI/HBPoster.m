@@ -18,8 +18,6 @@
 
 @implementation HBPoster
 
-__weak HBPoster *weakView;
-
 - (id)initWithImage:(UIImage *)image
 {
     self = [super initWithImage:image];
@@ -28,7 +26,6 @@ __weak HBPoster *weakView;
         self.userInteractionEnabled = YES;
         self.isRotated = NO;
         [self setupCoverView];
-        weakView = self;
     }
     
     return self;
@@ -56,18 +53,23 @@ __weak HBPoster *weakView;
 - (void)rotate
 {
     self.isRotated = !self.isRotated;
-    [UIView animateWithDuration:0.25f
-                     animations:rotateReverseAnimation
-                     completion:nil];
+    
+    [UIView beginAnimations:@"PosterRotate" context:nil];
+    
+    [UIView setAnimationDuration:0.5f];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self cache:YES];
+    
+    if (self.isRotated) {
+        self.coverView.hidden = NO;
+    } else {
+        self.coverView.hidden = YES;
+    }
+    
+    [UIView commitAnimations];
+
 }
 
-void (^rotateReverseAnimation)(void) = ^{
-    [weakView setTransform:CGAffineTransformScale(weakView.transform, -1, 1)];
-    if (weakView.isRotated) {
-        weakView.coverView.hidden = NO;
-    } else {
-        weakView.coverView.hidden = YES;
-    }
-};
+
 
 @end

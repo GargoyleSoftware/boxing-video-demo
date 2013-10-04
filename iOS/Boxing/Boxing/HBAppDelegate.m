@@ -7,15 +7,18 @@
 //
 
 #import "HBAppDelegate.h"
+#import "HBMainViewContoller.h"
 
 @implementation HBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    HBMainViewContoller *mainViewController = [[HBMainViewContoller alloc] init];
+    [self.window setRootViewController:mainViewController];
     return YES;
 }
 

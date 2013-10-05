@@ -13,6 +13,7 @@
 
 @property UIImageView *posterImageView;
 @property MPMoviePlayerController *moviePlayer;
+@property HBStreamSelectorViewController *streamSelector;
 @property UIView *playerView;
 @property bool isRotated;
 
@@ -32,8 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	  [self setupPoster];
+    [self setupPoster];
     [self setupPlayerView];
+    [self setupStreamSelector];
 }
 
 - (void)setupPoster
@@ -42,26 +44,14 @@
     self.posterImageView.translatesAutoresizingMaskIntoConstraints = NO;
     self.posterImageView.userInteractionEnabled = YES;
     [self.view addSubview:self.posterImageView];
-
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.posterImageView
-                                                          attribute:NSLayoutAttributeCenterX
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
-                                                         multiplier:1.f
-                                                           constant:0.f]];
-
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.posterImageView
-                                                          attribute:NSLayoutAttributeCenterY
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterY
-                                                         multiplier:1.f
-                                                           constant:0.f]];
-
-    [self.posterImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                       action:@selector(rotate)]];
-
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_posterImageView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:NSDictionaryOfVariableBindings(_posterImageView)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-44-[_posterImageView]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:NSDictionaryOfVariableBindings(_posterImageView)]];
 }
 
 - (void)setupPlayerView
@@ -82,17 +72,43 @@
     self.playerView.hidden = YES;
 }
 
+- (void)setupStreamSelector
+{
+    self.streamSelector = [[HBStreamSelectorViewController alloc] init];
+    self.streamSelector.delegate = self;
+    [self addChildViewController:self.streamSelector];
+    [self.view addSubview:self.streamSelector.view];
+    UIView *streamSelectorView = self.streamSelector.view;
+    
+    NSDictionary *views = NSDictionaryOfVariableBindings(_posterImageView, streamSelectorView);
+    NSString *visualFormat = @"V:[_posterImageView][streamSelectorView]-10-|";
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:visualFormat
+                                                                     options:NSLayoutFormatAlignAllLeft
+                                                                     metrics:nil
+                                                                       views:views]];
+    visualFormat = @"[streamSelectorView(_posterImageView)]";
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:visualFormat
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSURL *contentUrl = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
-    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:contentUrl];
+    [super viewDidAppear:animated];
     
-    [self.moviePlayer prepareToPlay];
-    self.moviePlayer.shouldAutoplay = NO;
-    self.moviePlayer.controlStyle = MPMovieControlStyleEmbedded;
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self rotate];
+    });
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
     
-    [self.moviePlayer.view setFrame:self.playerView.bounds];
-    [self.playerView addSubview:self.moviePlayer.view];
+    [self.moviePlayer stop];
 }
 
 - (void)rotate
@@ -115,6 +131,16 @@
 
     [UIView commitAnimations];
 
+}
+
+#pragma mark HBStreamSelectorViewController Delegate
+
+- (void)shouldSwitchToPlayer:(MPMoviePlayerController *)player
+{
+    self.moviePlayer = player;
+    
+    [self.moviePlayer.view setFrame:self.playerView.bounds];
+    [self.playerView addSubview:self.moviePlayer.view];
 }
 
 - (void)didReceiveMemoryWarning

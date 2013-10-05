@@ -10,6 +10,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface HBVideoFeedViewController : UIViewController
+#import "HBStreamSelectorViewController.h"
+
+@interface HBVideoFeedViewController : UIViewController<HBStreamSelectorViewControllerDelegate>
+
+- (void)shouldSwitchToPlayer:(MPMoviePlayerController *)player;
 
 @end

@@ -11,6 +11,7 @@
 		42E7E94D1800A71E00E1E13D /* HBMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E94B1800A71E00E1E13D /* HBMainMenuViewController.xib */; };
 		42E7E9511800A97900E1E13D /* HBNewsArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */; };
 		42E7E9521800A97900E1E13D /* HBNewsArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */; };
+		834D41E51800ABD3006314CA /* HBStreamSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834D41E41800ABD3006314CA /* HBStreamSelectorViewController.m */; };
 		83DDFAF617FF14D800AAD525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF517FF14D800AAD525 /* Foundation.framework */; };
 		83DDFAF817FF14D800AAD525 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */; };
 		83DDFAFA17FF14D800AAD525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF917FF14D800AAD525 /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 		42E7E94E1800A97900E1E13D /* HBNewsArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBNewsArticleViewController.h; sourceTree = "<group>"; };
 		42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBNewsArticleViewController.m; sourceTree = "<group>"; };
 		42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBNewsArticleViewController.xib; sourceTree = "<group>"; };
+		834D41E31800ABD3006314CA /* HBStreamSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBStreamSelectorViewController.h; sourceTree = "<group>"; };
+		834D41E41800ABD3006314CA /* HBStreamSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBStreamSelectorViewController.m; sourceTree = "<group>"; };
 		83DDFAF217FF14D800AAD525 /* Boxing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DDFAF517FF14D800AAD525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,8 @@
 				42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */,
 				42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */,
 				83DDFB1417FF14D800AAD525 /* BoxingTests */,
+				834D41E31800ABD3006314CA /* HBStreamSelectorViewController.h */,
+				834D41E41800ABD3006314CA /* HBStreamSelectorViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */,
+				834D41E51800ABD3006314CA /* HBStreamSelectorViewController.m in Sources */,
 				83DDFB2717FF258000AAD525 /* HBVideoFeedViewController.m in Sources */,
 				83DDFB0617FF14D800AAD525 /* HBAppDelegate.m in Sources */,
 				83DDFB0217FF14D800AAD525 /* main.m in Sources */,

@@ -82,11 +82,15 @@
     self.playerView.hidden = YES;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     NSURL *contentUrl = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:contentUrl];
+    
     [self.moviePlayer prepareToPlay];
+    self.moviePlayer.shouldAutoplay = NO;
     self.moviePlayer.controlStyle = MPMovieControlStyleEmbedded;
+    
     [self.moviePlayer.view setFrame:self.playerView.bounds];
     [self.playerView addSubview:self.moviePlayer.view];
 }

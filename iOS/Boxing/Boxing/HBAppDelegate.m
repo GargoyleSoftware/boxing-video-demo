@@ -7,7 +7,7 @@
 //
 
 #import "HBAppDelegate.h"
-#import "HBMainViewContoller.h"
+#import "HBVideoFeedViewContoller.h"
 
 @implementation HBAppDelegate
 
@@ -17,7 +17,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    HBMainViewContoller *mainViewController = [[HBMainViewContoller alloc] init];
+    HBVideoFeedViewContoller *mainViewController = [[HBVideoFeedViewContoller alloc] init];
     [self.window setRootViewController:mainViewController];
     return YES;
 }

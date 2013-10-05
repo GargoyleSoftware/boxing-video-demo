@@ -19,7 +19,7 @@
 		83DDFB1117FF14D800AAD525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF917FF14D800AAD525 /* UIKit.framework */; };
 		83DDFB1917FF14D800AAD525 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83DDFB1717FF14D800AAD525 /* InfoPlist.strings */; };
 		83DDFB1B17FF14D800AAD525 /* BoxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB1A17FF14D800AAD525 /* BoxingTests.m */; };
-		83DDFB2717FF258000AAD525 /* HBMainViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2617FF258000AAD525 /* HBMainViewContoller.m */; };
+		83DDFB2717FF258000AAD525 /* HBVideoFeedViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2617FF258000AAD525 /* HBVideoFeedViewContoller.m */; };
 		83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2A17FF4DA100AAD525 /* UIView+Autolayout.m */; };
 		83DDFB3417FF708D00AAD525 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFB3317FF708D00AAD525 /* AVFoundation.framework */; };
 		83DDFB3C180094F000AAD525 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFB3B180094F000AAD525 /* MediaPlayer.framework */; };
@@ -52,8 +52,8 @@
 		83DDFB1617FF14D800AAD525 /* BoxingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BoxingTests-Info.plist"; sourceTree = "<group>"; };
 		83DDFB1817FF14D800AAD525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83DDFB1A17FF14D800AAD525 /* BoxingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxingTests.m; sourceTree = "<group>"; };
-		83DDFB2517FF258000AAD525 /* HBMainViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBMainViewContoller.h; sourceTree = "<group>"; };
-		83DDFB2617FF258000AAD525 /* HBMainViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMainViewContoller.m; sourceTree = "<group>"; };
+		83DDFB2517FF258000AAD525 /* HBVideoFeedViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBVideoFeedViewContoller.h; sourceTree = "<group>"; };
+		83DDFB2617FF258000AAD525 /* HBVideoFeedViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBVideoFeedViewContoller.m; sourceTree = "<group>"; };
 		83DDFB2917FF4DA100AAD525 /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Autolayout.h"; path = "Categories/UIView+Autolayout.h"; sourceTree = "<group>"; };
 		83DDFB2A17FF4DA100AAD525 /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Autolayout.m"; path = "Categories/UIView+Autolayout.m"; sourceTree = "<group>"; };
 		83DDFB3317FF708D00AAD525 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -164,8 +164,8 @@
 		83DDFB2417FF246300AAD525 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83DDFB2517FF258000AAD525 /* HBMainViewContoller.h */,
-				83DDFB2617FF258000AAD525 /* HBMainViewContoller.m */,
+				83DDFB2517FF258000AAD525 /* HBVideoFeedViewContoller.h */,
+				83DDFB2617FF258000AAD525 /* HBVideoFeedViewContoller.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */,
-				83DDFB2717FF258000AAD525 /* HBMainViewContoller.m in Sources */,
+				83DDFB2717FF258000AAD525 /* HBVideoFeedViewContoller.m in Sources */,
 				83DDFB0617FF14D800AAD525 /* HBAppDelegate.m in Sources */,
 				83DDFB0217FF14D800AAD525 /* main.m in Sources */,
 			);

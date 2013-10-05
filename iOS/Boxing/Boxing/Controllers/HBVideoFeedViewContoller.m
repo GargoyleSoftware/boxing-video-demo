@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Chris Jeane. All rights reserved.
 //
 
-#import "HBMainViewContoller.h"
+#import "HBVideoFeedViewContoller.h"
 #import "UIView+Autolayout.h"
 
-@interface HBMainViewContoller ()
+@interface HBVideoFeedViewContoller ()
 
 @property UIImageView *posterImageView;
 @property MPMoviePlayerController *moviePlayer;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation HBMainViewContoller
+@implementation HBVideoFeedViewContoller
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

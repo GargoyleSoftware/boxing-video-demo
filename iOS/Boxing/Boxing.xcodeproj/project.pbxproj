@@ -21,7 +21,8 @@
 		83DDFB1B17FF14D800AAD525 /* BoxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB1A17FF14D800AAD525 /* BoxingTests.m */; };
 		83DDFB2717FF258000AAD525 /* HBMainViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2617FF258000AAD525 /* HBMainViewContoller.m */; };
 		83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2A17FF4DA100AAD525 /* UIView+Autolayout.m */; };
-		83DDFB2F17FF541100AAD525 /* HBPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2E17FF541100AAD525 /* HBPoster.m */; };
+		83DDFB3417FF708D00AAD525 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFB3317FF708D00AAD525 /* AVFoundation.framework */; };
+		83DDFB3C180094F000AAD525 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFB3B180094F000AAD525 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,8 @@
 		83DDFB2617FF258000AAD525 /* HBMainViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMainViewContoller.m; sourceTree = "<group>"; };
 		83DDFB2917FF4DA100AAD525 /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Autolayout.h"; path = "Categories/UIView+Autolayout.h"; sourceTree = "<group>"; };
 		83DDFB2A17FF4DA100AAD525 /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Autolayout.m"; path = "Categories/UIView+Autolayout.m"; sourceTree = "<group>"; };
-		83DDFB2D17FF541100AAD525 /* HBPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBPoster.h; path = "Custom UI/HBPoster.h"; sourceTree = "<group>"; };
-		83DDFB2E17FF541100AAD525 /* HBPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBPoster.m; path = "Custom UI/HBPoster.m"; sourceTree = "<group>"; };
+		83DDFB3317FF708D00AAD525 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		83DDFB3B180094F000AAD525 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DDFB3C180094F000AAD525 /* MediaPlayer.framework in Frameworks */,
+				83DDFB3417FF708D00AAD525 /* AVFoundation.framework in Frameworks */,
 				83DDFAF817FF14D800AAD525 /* CoreGraphics.framework in Frameworks */,
 				83DDFAFA17FF14D800AAD525 /* UIKit.framework in Frameworks */,
 				83DDFAF617FF14D800AAD525 /* Foundation.framework in Frameworks */,
@@ -105,6 +108,8 @@
 		83DDFAF417FF14D800AAD525 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83DDFB3B180094F000AAD525 /* MediaPlayer.framework */,
+				83DDFB3317FF708D00AAD525 /* AVFoundation.framework */,
 				83DDFAF517FF14D800AAD525 /* Foundation.framework */,
 				83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */,
 				83DDFAF917FF14D800AAD525 /* UIKit.framework */,
@@ -177,8 +182,6 @@
 		83DDFB2C17FF53F200AAD525 /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
-				83DDFB2D17FF541100AAD525 /* HBPoster.h */,
-				83DDFB2E17FF541100AAD525 /* HBPoster.m */,
 			);
 			name = "Custom UI";
 			sourceTree = "<group>";
@@ -279,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DDFB2F17FF541100AAD525 /* HBPoster.m in Sources */,
 				83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */,
 				83DDFB2717FF258000AAD525 /* HBMainViewContoller.m in Sources */,
 				83DDFB0617FF14D800AAD525 /* HBAppDelegate.m in Sources */,

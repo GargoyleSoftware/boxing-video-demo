@@ -10,4 +10,6 @@
 
 @interface HBNewsArticleViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+
 @end

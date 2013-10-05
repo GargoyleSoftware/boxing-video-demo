@@ -11,6 +11,8 @@
 		42E7E94D1800A71E00E1E13D /* HBMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E94B1800A71E00E1E13D /* HBMainMenuViewController.xib */; };
 		42E7E9511800A97900E1E13D /* HBNewsArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */; };
 		42E7E9521800A97900E1E13D /* HBNewsArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */; };
+		42E7E9581800B42D00E1E13D /* article.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E9551800B42C00E1E13D /* article.jpg */; };
+		42E7E9591800B42D00E1E13D /* boxing-article.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E9571800B42C00E1E13D /* boxing-article.txt */; };
 		83DDFAF617FF14D800AAD525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF517FF14D800AAD525 /* Foundation.framework */; };
 		83DDFAF817FF14D800AAD525 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */; };
 		83DDFAFA17FF14D800AAD525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF917FF14D800AAD525 /* UIKit.framework */; };
@@ -46,6 +48,8 @@
 		42E7E94E1800A97900E1E13D /* HBNewsArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBNewsArticleViewController.h; sourceTree = "<group>"; };
 		42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBNewsArticleViewController.m; sourceTree = "<group>"; };
 		42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBNewsArticleViewController.xib; sourceTree = "<group>"; };
+		42E7E9551800B42C00E1E13D /* article.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article.jpg; sourceTree = "<group>"; };
+		42E7E9571800B42C00E1E13D /* boxing-article.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "boxing-article.txt"; sourceTree = "<group>"; };
 		83DDFAF217FF14D800AAD525 /* Boxing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DDFAF517FF14D800AAD525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,12 +100,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42E7E9531800B42C00E1E13D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42E7E9541800B42C00E1E13D /* Images */,
+				42E7E9561800B42C00E1E13D /* Text */,
+			);
+			name = Resources;
+			path = Boxing/Resources;
+			sourceTree = "<group>";
+		};
+		42E7E9541800B42C00E1E13D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				42E7E9551800B42C00E1E13D /* article.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		42E7E9561800B42C00E1E13D /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				42E7E9571800B42C00E1E13D /* boxing-article.txt */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		83DDFAE917FF14D800AAD525 = {
 			isa = PBXGroup;
 			children = (
 				83DDFAFB17FF14D800AAD525 /* Boxing */,
 				83DDFAF417FF14D800AAD525 /* Frameworks */,
 				83DDFAF317FF14D800AAD525 /* Products */,
+				42E7E9531800B42C00E1E13D /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,8 +311,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DDFB0017FF14D800AAD525 /* InfoPlist.strings in Resources */,
+				42E7E9581800B42D00E1E13D /* article.jpg in Resources */,
 				42E7E94D1800A71E00E1E13D /* HBMainMenuViewController.xib in Resources */,
 				42E7E9521800A97900E1E13D /* HBNewsArticleViewController.xib in Resources */,
+				42E7E9591800B42D00E1E13D /* boxing-article.txt in Resources */,
 				83DDFB0817FF14D800AAD525 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

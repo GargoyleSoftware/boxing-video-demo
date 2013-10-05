@@ -50,11 +50,6 @@
 
     [self.navigationController pushViewController: vc
                                          animated: YES];
-
-    //[self presentViewController: vc
-                       //animated: YES
-                     //completion: ^{}
-    //];
 }
 
 - (IBAction)newsButtonWasPressed:(id)sender
@@ -68,11 +63,11 @@
 
     [self.navigationController pushViewController: vc
                                          animated: YES];
-//
-//    [self presentViewController: vc
-//                       animated: YES
-//                     completion: ^{}
-//    ];
+
+    //    [self presentViewController: vc
+    //                       animated: YES
+    //                     completion: ^{}
+    //    ];
 
 }
 

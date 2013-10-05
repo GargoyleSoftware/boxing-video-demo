@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42E7E94C1800A71E00E1E13D /* HBMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7E94A1800A71E00E1E13D /* HBMainMenuViewController.m */; };
+		42E7E94D1800A71E00E1E13D /* HBMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E94B1800A71E00E1E13D /* HBMainMenuViewController.xib */; };
+		42E7E9511800A97900E1E13D /* HBNewsArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */; };
+		42E7E9521800A97900E1E13D /* HBNewsArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */; };
 		83DDFAF617FF14D800AAD525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF517FF14D800AAD525 /* Foundation.framework */; };
 		83DDFAF817FF14D800AAD525 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */; };
 		83DDFAFA17FF14D800AAD525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF917FF14D800AAD525 /* UIKit.framework */; };
@@ -19,7 +23,7 @@
 		83DDFB1117FF14D800AAD525 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFAF917FF14D800AAD525 /* UIKit.framework */; };
 		83DDFB1917FF14D800AAD525 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83DDFB1717FF14D800AAD525 /* InfoPlist.strings */; };
 		83DDFB1B17FF14D800AAD525 /* BoxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB1A17FF14D800AAD525 /* BoxingTests.m */; };
-		83DDFB2717FF258000AAD525 /* HBVideoFeedViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2617FF258000AAD525 /* HBVideoFeedViewContoller.m */; };
+		83DDFB2717FF258000AAD525 /* HBVideoFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2617FF258000AAD525 /* HBVideoFeedViewController.m */; };
 		83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DDFB2A17FF4DA100AAD525 /* UIView+Autolayout.m */; };
 		83DDFB3417FF708D00AAD525 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFB3317FF708D00AAD525 /* AVFoundation.framework */; };
 		83DDFB3C180094F000AAD525 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DDFB3B180094F000AAD525 /* MediaPlayer.framework */; };
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42E7E9491800A71E00E1E13D /* HBMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBMainMenuViewController.h; sourceTree = "<group>"; };
+		42E7E94A1800A71E00E1E13D /* HBMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMainMenuViewController.m; sourceTree = "<group>"; };
+		42E7E94B1800A71E00E1E13D /* HBMainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBMainMenuViewController.xib; sourceTree = "<group>"; };
+		42E7E94E1800A97900E1E13D /* HBNewsArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBNewsArticleViewController.h; sourceTree = "<group>"; };
+		42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBNewsArticleViewController.m; sourceTree = "<group>"; };
+		42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBNewsArticleViewController.xib; sourceTree = "<group>"; };
 		83DDFAF217FF14D800AAD525 /* Boxing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DDFAF517FF14D800AAD525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83DDFAF717FF14D800AAD525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,8 +62,8 @@
 		83DDFB1617FF14D800AAD525 /* BoxingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BoxingTests-Info.plist"; sourceTree = "<group>"; };
 		83DDFB1817FF14D800AAD525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83DDFB1A17FF14D800AAD525 /* BoxingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxingTests.m; sourceTree = "<group>"; };
-		83DDFB2517FF258000AAD525 /* HBVideoFeedViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBVideoFeedViewContoller.h; sourceTree = "<group>"; };
-		83DDFB2617FF258000AAD525 /* HBVideoFeedViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBVideoFeedViewContoller.m; sourceTree = "<group>"; };
+		83DDFB2517FF258000AAD525 /* HBVideoFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBVideoFeedViewController.h; sourceTree = "<group>"; };
+		83DDFB2617FF258000AAD525 /* HBVideoFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBVideoFeedViewController.m; sourceTree = "<group>"; };
 		83DDFB2917FF4DA100AAD525 /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Autolayout.h"; path = "Categories/UIView+Autolayout.h"; sourceTree = "<group>"; };
 		83DDFB2A17FF4DA100AAD525 /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Autolayout.m"; path = "Categories/UIView+Autolayout.m"; sourceTree = "<group>"; };
 		83DDFB3317FF708D00AAD525 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -90,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				83DDFAFB17FF14D800AAD525 /* Boxing */,
-				83DDFB1417FF14D800AAD525 /* BoxingTests */,
 				83DDFAF417FF14D800AAD525 /* Frameworks */,
 				83DDFAF317FF14D800AAD525 /* Products */,
 			);
@@ -149,7 +158,8 @@
 				83DDFB1A17FF14D800AAD525 /* BoxingTests.m */,
 				83DDFB1517FF14D800AAD525 /* Supporting Files */,
 			);
-			path = BoxingTests;
+			name = BoxingTests;
+			path = ../../BoxingTests;
 			sourceTree = "<group>";
 		};
 		83DDFB1517FF14D800AAD525 /* Supporting Files */ = {
@@ -164,8 +174,15 @@
 		83DDFB2417FF246300AAD525 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83DDFB2517FF258000AAD525 /* HBVideoFeedViewContoller.h */,
-				83DDFB2617FF258000AAD525 /* HBVideoFeedViewContoller.m */,
+				83DDFB2517FF258000AAD525 /* HBVideoFeedViewController.h */,
+				83DDFB2617FF258000AAD525 /* HBVideoFeedViewController.m */,
+				42E7E9491800A71E00E1E13D /* HBMainMenuViewController.h */,
+				42E7E94A1800A71E00E1E13D /* HBMainMenuViewController.m */,
+				42E7E94B1800A71E00E1E13D /* HBMainMenuViewController.xib */,
+				42E7E94E1800A97900E1E13D /* HBNewsArticleViewController.h */,
+				42E7E94F1800A97900E1E13D /* HBNewsArticleViewController.m */,
+				42E7E9501800A97900E1E13D /* HBNewsArticleViewController.xib */,
+				83DDFB1417FF14D800AAD525 /* BoxingTests */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DDFB0017FF14D800AAD525 /* InfoPlist.strings in Resources */,
+				42E7E94D1800A71E00E1E13D /* HBMainMenuViewController.xib in Resources */,
+				42E7E9521800A97900E1E13D /* HBNewsArticleViewController.xib in Resources */,
 				83DDFB0817FF14D800AAD525 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,9 +302,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DDFB2B17FF4DA100AAD525 /* UIView+Autolayout.m in Sources */,
-				83DDFB2717FF258000AAD525 /* HBVideoFeedViewContoller.m in Sources */,
+				83DDFB2717FF258000AAD525 /* HBVideoFeedViewController.m in Sources */,
 				83DDFB0617FF14D800AAD525 /* HBAppDelegate.m in Sources */,
 				83DDFB0217FF14D800AAD525 /* main.m in Sources */,
+				42E7E9511800A97900E1E13D /* HBNewsArticleViewController.m in Sources */,
+				42E7E94C1800A71E00E1E13D /* HBMainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +509,7 @@
 				83DDFB2017FF14D800AAD525 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83DDFB2117FF14D800AAD525 /* Build configuration list for PBXNativeTarget "BoxingTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +518,7 @@
 				83DDFB2317FF14D800AAD525 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

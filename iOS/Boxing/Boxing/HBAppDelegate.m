@@ -7,7 +7,8 @@
 //
 
 #import "HBAppDelegate.h"
-#import "HBVideoFeedViewContoller.h"
+//#import "HBVideoFeedViewContoller.h"
+#import "HBMainMenuViewController.h"
 
 @implementation HBAppDelegate
 
@@ -16,9 +17,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    HBVideoFeedViewContoller *mainViewController = [[HBVideoFeedViewContoller alloc] init];
-    [self.window setRootViewController:mainViewController];
+
+
+
+    HBMainMenuViewController *mainViewController = [[HBMainMenuViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: mainViewController];
+//    HBVideoFeedViewContoller *mainViewController = [[HBVideoFeedViewContoller alloc] init];
+    [self.window setRootViewController: navController];
     return YES;
 }
 
@@ -30,7 +35,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

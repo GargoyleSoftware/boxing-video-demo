@@ -10,6 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface HBVideoFeedViewContoller : UIViewController
+@interface HBVideoFeedViewController : UIViewController
 
 @end

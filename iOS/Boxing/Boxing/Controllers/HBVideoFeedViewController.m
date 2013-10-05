@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Chris Jeane. All rights reserved.
 //
 
-#import "HBVideoFeedViewContoller.h"
+#import "HBVideoFeedViewController.h"
 #import "UIView+Autolayout.h"
 
-@interface HBVideoFeedViewContoller ()
+@interface HBVideoFeedViewController ()
 
 @property UIImageView *posterImageView;
 @property MPMoviePlayerController *moviePlayer;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation HBVideoFeedViewContoller
+@implementation HBVideoFeedViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self setupPoster];
+	  [self setupPoster];
     [self setupPlayerView];
 }
 
@@ -42,7 +42,7 @@
     self.posterImageView.translatesAutoresizingMaskIntoConstraints = NO;
     self.posterImageView.userInteractionEnabled = YES;
     [self.view addSubview:self.posterImageView];
-    
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.posterImageView
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
@@ -50,7 +50,7 @@
                                                           attribute:NSLayoutAttributeCenterX
                                                          multiplier:1.f
                                                            constant:0.f]];
-    
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.posterImageView
                                                           attribute:NSLayoutAttributeCenterY
                                                           relatedBy:NSLayoutRelationEqual
@@ -58,10 +58,10 @@
                                                           attribute:NSLayoutAttributeCenterY
                                                          multiplier:1.f
                                                            constant:0.f]];
-    
+
     [self.posterImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                        action:@selector(rotate)]];
-    
+
 }
 
 - (void)setupPlayerView
@@ -69,7 +69,7 @@
     self.playerView = [[UIView alloc] init];
     self.playerView.translatesAutoresizingMaskIntoConstraints = NO;
     self.playerView.backgroundColor = [UIColor blackColor];
-    
+
     [self.posterImageView addSubview:self.playerView];
     [self.posterImageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_playerView]-|"
                                                                       options:0
@@ -94,13 +94,13 @@
 - (void)rotate
 {
     self.isRotated = !self.isRotated;
-    
+
     [UIView beginAnimations:@"PosterRotate" context:nil];
-    
+
     [UIView setAnimationDuration:0.5f];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.posterImageView cache:YES];
-    
+
     if (self.isRotated) {
         self.playerView.hidden = NO;
         [self.moviePlayer play];
@@ -108,9 +108,9 @@
         self.playerView.hidden = YES;
         [self.moviePlayer pause];
     }
-    
+
     [UIView commitAnimations];
-    
+
 }
 
 - (void)didReceiveMemoryWarning
